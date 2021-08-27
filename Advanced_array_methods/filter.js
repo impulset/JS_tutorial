@@ -29,7 +29,7 @@ let friends = [
 // [{name: "Amanda"},{name: "Nathan"}];
 
 //How Does It Work? Own version
-function filter(array, callback){
+function myFilter(array, callback){
   let newArray = [];
   for(let i = 0; i < array.length; i++){
     if(callback(array[i], i, array)){
@@ -46,6 +46,7 @@ function fourOrLessNames(names){
   });
 }
 fourOrLessNames(['Fido', 'Blue', 'Rascal']); // ['Fido', 'Blue']
+
 function onlyInstructors(arr) {
   return arr.filter(function(value) {
     return arr.isInstructor;
@@ -56,3 +57,12 @@ onlyInstructors([
   { name: "Beth", isInstructor: false },
   { name: "Daniel" }
 ]); // [{name: "Colt", isInstructor: true}]
+
+//Example with checkboxes
+const allChecked = document.querySelectorAll('input[type="checkbox"]');
+const checked = Array.from(allChecked).filter(function(box){
+  return box.checked
+})
+const completedItems = checked.map(function(checkbox) {
+  return checkbox.parentElement.innerText;
+})
