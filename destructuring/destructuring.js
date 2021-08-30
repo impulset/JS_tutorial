@@ -69,9 +69,11 @@ const instructor = {
 const { funFacts: { favoriteFood, favoriteDrink } } = instructor;
 console.log(favoriteFood); // 'Burrito'
 
+const { name: [{ value }] } = database;
+
 //Destructuring functions
 //We can use destructuring to extract key/value pairs from an object into variables.
-    //old way
+//old way
 function makeInstructor(settings) {
   let name = settings.name;
   let age = settings.age;
