@@ -4,7 +4,6 @@ $("li").click(function(ev){
 
 // get text
 $("li").text()
-
 // set text
 $("li").text("some text")
 
